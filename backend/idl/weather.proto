@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package weather;
+
+option go_package = "../../src/WeatherService;weather";
+
+message WeatherRequest {
+  string city = 1;        // 城市的adcode
+  string extensions = 2;  // 查询类型 (base 或 all)
+}
+
+message WeatherResponse {
+  int32 status = 1;        // 状态码，1 表示成功
+  string info = 2;         // 信息描述
+  string city = 3;         // 城市名
+  string weather = 4;      // 天气现象
+  string temperature = 5;  // 温度
+  string humidity = 6;     // 湿度
+  string wind = 7;         // 风向
+  string reporttime = 8;   // 数据发布时间
+}
+
+service WeatherService {
+  rpc GetWeather (WeatherRequest) returns (WeatherResponse);
+}
