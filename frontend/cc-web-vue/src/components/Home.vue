@@ -33,7 +33,7 @@
   
   <script>
   export default {
-    name: 'HomePage',
+    name: 'HomePage0',
     methods: {
       // 跳转到天气查询页面
       goToWeather() {

@@ -10,7 +10,7 @@ import (
 	pb "CC-web/grpc/weather_rpc"
 )
 
-const weatherApi = "835ad9c03e0777cb1095985511eaf078"
+const weatherApi = "换成api"
 
 type WeatherService struct {
 	pb.UnimplementedWeatherServiceServer
